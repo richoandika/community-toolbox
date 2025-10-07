@@ -1,0 +1,29 @@
+{
+  "name": "color-palette-generator",
+  "version": "1.0.0",
+  "description": "A utility for generating and manipulating color palettes with various color schemes and formats",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "keywords": [
+    "color",
+    "palette",
+    "generator",
+    "design",
+    "utility",
+    "hex",
+    "rgb",
+    "hsl"
+  ],
+  "author": "Community Toolbox",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.0.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
