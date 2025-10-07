@@ -1,0 +1,13 @@
+# General
+.DS_Store
+*.log
+node_modules/
+package-lock.json
+venv/
+.env
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Go
+bin/
