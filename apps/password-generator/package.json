@@ -1,0 +1,19 @@
+{
+  "name": "password-generator",
+  "version": "1.0.0",
+  "description": "CLI tool to generate secure passwords",
+  "main": "index.js",
+  "bin": {
+    "password-generator": "index.js"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [
+    "password",
+    "generator",
+    "cli"
+  ],
+  "author": "Community Toolbox Contributors",
+  "license": "MIT"
+}
