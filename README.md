@@ -33,6 +33,7 @@ will count toward the event.
 | [Unit Converter](apps/unit-converter) | Go | Convert meters to feet, feet to meters, Celsius to Fahrenheit, and Fahrenheit to Celsius. |
 | [BMI Calculator](apps/bmi_calculator) | Python | Compute body mass index and return a weight classification. |
 | [Password Generator](apps/password-generator) | Node.js | Generate secure random passwords from the command line with customizable options. |
+| [QR Code Generator](apps/qr-generator) | Python | Generate QR codes from text or URLs with multiple output formats (PNG, SVG, ASCII) and customization options. |
 
 ## Code of Conduct
 
