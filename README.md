@@ -34,6 +34,7 @@ will count toward the event.
 | [BMI Calculator](apps/bmi_calculator) | Python | Compute body mass index and return a weight classification. |
 | [Password Generator](apps/password-generator) | Node.js | Generate secure random passwords from the command line with customizable options. |
 | [QR Code Generator](apps/qr-generator) | Python | Generate QR codes from text or URLs with multiple output formats (PNG, SVG, ASCII) and customization options. |
+| [Tip Calculator](apps/tip-calculator) | Python | Calculate tip, total, and per-person amounts with precise decimals, rounding controls, and currency support. |
 
 ## Code of Conduct
 
