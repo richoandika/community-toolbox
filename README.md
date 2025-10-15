@@ -35,6 +35,9 @@ will count toward the event.
 | [Password Generator](apps/password-generator) | Node.js | Generate secure random passwords from the command line with customizable options. |
 | [QR Code Generator](apps/qr-generator) | Python | Generate QR codes from text or URLs with multiple output formats (PNG, SVG, ASCII) and customization options. |
 | [Tip Calculator](apps/tip-calculator) | Python | Calculate tip, total, and per-person amounts with precise decimals, rounding controls, and currency support. |
+| [Color Palette Generator](apps/color-palette-generator) | Node.js | Produce accessible color palettes and export them for design tools. |
+| [Text Analyzer](apps/text-analyzer) | Python | Inspect text for statistics like word counts, reading levels, and common words. |
+| [Morse Code Translator](apps/morse_code_translator) | Python | Translate text to Morse code (and back) via a simple CLI or Python API. |
 
 ## Code of Conduct
 
