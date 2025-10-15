@@ -8,11 +8,11 @@ from __future__ import annotations
 
 import argparse
 from dataclasses import dataclass
-from typing import Iterable
+from typing import Dict, Iterable, List
 
 # International Morse code reference for alphanumeric characters and common
 # punctuation marks. " " (space) is handled separately at runtime.
-MORSE_CODE_TABLE: dict[str, str] = {
+MORSE_CODE_TABLE: Dict[str, str] = {
     "A": ".-",
     "B": "-...",
     "C": "-.-.",
@@ -69,7 +69,7 @@ MORSE_CODE_TABLE: dict[str, str] = {
     "@": ".--.-.",
 }
 
-REVERSE_MORSE_CODE_TABLE: dict[str, str] = {value: key for key, value in MORSE_CODE_TABLE.items()}
+REVERSE_MORSE_CODE_TABLE: Dict[str, str] = {value: key for key, value in MORSE_CODE_TABLE.items()}
 
 DEFAULT_LETTER_SEPARATOR = " "
 DEFAULT_WORD_SEPARATOR = " / "
@@ -100,8 +100,8 @@ def encode_to_morse(text: str, *, letter_sep: str = DEFAULT_LETTER_SEPARATOR, wo
     handle unsupported input explicitly.
     """
 
-    words: list[str] = []
-    current_letters: list[str] = []
+    words: List[str] = []
+    current_letters: List[str] = []
 
     for character in _normalize_text(text):
         if character == " ":
@@ -127,13 +127,13 @@ def decode_from_morse(morse: str, *, letter_sep: str = DEFAULT_LETTER_SEPARATOR,
     if not morse.strip():
         return ""
 
-    decoded_words: list[str] = []
+    decoded_words: List[str] = []
     for raw_word in morse.split(word_sep):
         stripped_word = raw_word.strip()
         if not stripped_word:
             continue
 
-        decoded_letters: list[str] = []
+        decoded_letters: List[str] = []
         for token in filter(None, stripped_word.split(letter_sep)):
             try:
                 decoded_letters.append(REVERSE_MORSE_CODE_TABLE[token])

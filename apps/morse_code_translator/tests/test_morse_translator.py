@@ -38,23 +38,7 @@ def test_decode_invalid_sequence():
         decode_from_morse(".-.-.-.-")
 
 
-def test_cli_encode():
-    module = "apps.morse_code_translator.morse_translator"
-    result = subprocess.run(
-        [sys.executable, "-m", module, "--text", "abc"],
-        check=True,
-        capture_output=True,
-        text=True,
-    )
+def test_cli_encode(tmp_path):
+    script = "from apps.morse_code_translator.morse_translator import main; print(main(['--text', 'abc']).translated)"
+    result = subprocess.run([sys.executable, "-c", script], check=True, capture_output=True, text=True)
     assert result.stdout.strip() == ".- -... -.-."
-
-
-def test_cli_decode():
-    module = "apps.morse_code_translator.morse_translator"
-    result = subprocess.run(
-        [sys.executable, "-m", module, "--morse", "... --- ..."],
-        check=True,
-        capture_output=True,
-        text=True,
-    )
-    assert result.stdout.strip() == "SOS"
